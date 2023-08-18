@@ -1,4 +1,8 @@
+import { FaGlobe, FaUserAstronaut } from 'react-icons/fa';
+
 const Home = () => {
+  const getCountries = () => [];
+
   return (
     <>
       <div id="carousel" className="carousel slide carousel-fade">
@@ -64,6 +68,33 @@ const Home = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+
+      {true && (
+        <div className="row mt-4 gy-4">
+          <div className="col-md">
+            <div className="p-5 text-center bg-danger-subtle rounded-4">
+              <h1 className="display-1 fw-bolder text-danger">
+                <FaUserAstronaut />
+              </h1>
+              <h1 className="fw-bolder text-danger">
+                <span>{0}</span> Knights
+              </h1>
+              <p>Clock is ticking. Hurry up! </p>
+            </div>
+          </div>
+          <div className="col-md">
+            <div className="p-5 text-center bg-body-secondary rounded-4">
+              <h1 className="display-1 fw-bolder text-danger">
+                <FaGlobe />
+              </h1>
+              <h1 className="fw-bolder text-danger">Global</h1>
+              <p>
+                Participants from <span>{getCountries()}</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
